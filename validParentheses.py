@@ -8,15 +8,14 @@ Open brackets must be closed in the correct order.
  
 
 Example 1:
-
 Input: s = "()"
 Output: true
-Example 2:
 
+Example 2:
 Input: s = "()[]{}"
 Output: true
-Example 3:
 
+Example 3:
 Input: s = "(]"
 Output: false
  
@@ -55,3 +54,22 @@ class Solution:
                     return False
         
         return len(stack) == 0
+
+
+# -----------------------------------------------------------------------------
+# run solution
+# -----------------------------------------------------------------------------
+if __name__ == "__main__":
+    INPUTS = (
+        # s: str,   output: bool
+        ("()",      True),
+        ("()[]{}",  True),
+        ("(]",      False)
+    )
+
+    mySolution = Solution()
+
+    for s, expected in INPUTS:
+        print(f"input: {s}")
+        actual = mySolution.isValid(s)
+        print(f"expected: {expected}, actual: {actual}")
