@@ -4,7 +4,7 @@
 
 1. Two Sum (#1, <a href="https://leetcode.com/problems/two-sum/">src</a>, <a href="https://github.com/aarondelgiudice/leetCode/blob/main/twoSum.py">solution</a>)
 
-2. Median of Two Sorted Arrays * (#4, <a href="https://leetcode.com/problems/median-of-two-sorted-arrays/">src</a>, <a href="https://github.com/aarondelgiudice/leetCode/blob/main/medianOfTwoSortedArrays.py">solution</a>)
+2. Median of Two Sorted Arrays (#4, <a href="https://leetcode.com/problems/median-of-two-sorted-arrays/">src</a>, <a href="https://github.com/aarondelgiudice/leetCode/blob/main/medianOfTwoSortedArrays.py">solution</a>)
 
 3. Longest Palindromic Substring (#5, <a href="https://leetcode.com/problems/longest-palindromic-substring/">src</a>, <a href="https://github.com/aarondelgiudice/leetCode/blob/main/longestPalindromicSubstring.py">solution</a>)
 
@@ -82,7 +82,6 @@
 
 40. Reorganize String (#767, <a href="https://leetcode.com/problems/reorganize-string/">src</a>, solution)
 
-\t* not required to solve
-\t~ solve both iteratively and recursively
+~ solve both iteratively and recursively
 
 <i>source: <a href="https://leetcode.com/discuss/interview-question/488887/Amazon-Final-Interview-Questions-or-SDE1">https://leetcode.com/discuss/interview-question/488887/Amazon-Final-Interview-Questions-or-SDE1</a></i>
