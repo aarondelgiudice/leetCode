@@ -12,7 +12,7 @@
 
 5. Integer to Roman (#12, <a href="https://leetcode.com/problems/integer-to-roman/">src</a>, <a href="https://github.com/aarondelgiudice/leetCode/blob/main/integerToRoman.py">solution</a>)
 
-6. Roman to Integer (#13, <a href="https://leetcode.com/problems/roman-to-integer/">src</a>, solution)
+6. Roman to Integer (#13, <a href="https://leetcode.com/problems/roman-to-integer/">src</a>, <a href="https://github.com/aarondelgiudice/leetCode/blob/main/romanToInteger.py">solution</a>)
 
 7. Valid Parentheses (#20, <a href="https://leetcode.com/problems/valid-parentheses/">src</a>, <a href="https://github.com/aarondelgiudice/leetCode/blob/main/validParentheses.py">solution</a>)
 
