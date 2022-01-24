@@ -73,3 +73,5 @@ if __name__ == "__main__":
         print(f"input: {s}")
         actual = mySolution.isValid(s)
         print(f"expected: {expected}, actual: {actual}")
+        if expected != actual:
+            raise RuntimeError(f"acutal value does not match expected: actual={actual}, expected={expected}")

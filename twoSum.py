@@ -69,3 +69,5 @@ if __name__ == "__main__":
         print(f"nums: {nums}, target: {target}")
         expected = mySolution.twoSum(nums=nums, target=target)
         print(f"actual: {actual}, expected: {expected}")
+        if expected != actual:
+            raise RuntimeError(f"acutal value does not match expected: actual={actual}, expected={expected}")

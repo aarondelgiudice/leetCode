@@ -51,8 +51,8 @@ class Solution:
 if __name__ == "__main__":
     INPUTS = (
         # input: str,   output: str
-        ("babad",       "'bab' or 'aba'",),
-        ("cbbd",        "bb",),
+        ("babad",       ["bab", "aba"],),
+        ("cbbd",        ["bb"],),
     )
 
     mySolution = Solution()
@@ -61,3 +61,5 @@ if __name__ == "__main__":
         print(f"input: {s}")
         actual = mySolution.longestPalindrome(s)
         print(f"expected: {expected}, actual: {actual}")
+        if actual not in expected:
+            raise RuntimeError(f"acutal value does not match expected: actual={actual}, expected={expected}")
