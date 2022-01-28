@@ -20,7 +20,7 @@
 
 9. Valid Sudoku (#36, <a href="https://leetcode.com/problems/valid-sudoku/">src</a>, solution)
 
-10. Combination Sum (#39, <a href="https://leetcode.com/problems/combination-sum/">src</a>, solution)
+10. Combination Sum (#39, <a href="https://leetcode.com/problems/combination-sum/">src</a>, <a href="https://github.com/aarondelgiudice/leetCode/blob/main/combinationSum.py">solution</a>)
 
 11. Permutations (#46, <a href="https://leetcode.com/problems/permutations/">src</a>, solution)
 
