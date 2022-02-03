@@ -26,7 +26,7 @@
 
 12. Merge Intervals (#56, <a href="https://leetcode.com/problems/merge-intervals/">src</a>, solution)
 
-13. Rotate List (#61, <a href="https://leetcode.com/problems/rotate-list/">src</a>, solution)
+13. Rotate List (#61, <a href="https://leetcode.com/problems/rotate-list/">src</a>, <a, href="https://github.com/aarondelgiudice/leetCode/blob/main/rotateList.py">solution</a>)
 
 14. Minimum Path Sum (#64, <a href="https://leetcode.com/problems/minimum-path-sum/">src</a>, solution)
 
