@@ -62,9 +62,9 @@ if __name__ == "__main__":
 
     mySolution = Solution()
 
-    for grid, actual in INPUTS:
+    for grid, expected in INPUTS:
         print(f"grid: {grid}, output: {actual}")
-        expected = mySolution.minPathSum(grid)
+        actual = mySolution.minPathSum(grid)
         print(f"expected: {expected}, actual: {actual}")
         if expected != actual:
             raise RuntimeError(f"acutal value does not match expected: actual={actual}, expected={expected}")

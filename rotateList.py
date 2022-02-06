@@ -95,14 +95,14 @@ if __name__ == "__main__":
 
     mySolution = Solution()
 
-    for head, k, actual in INPUTS:
+    for head, k, expected in INPUTS:
         continue  # delete, see TODO below
 
         # TODO: convert list input to linked list
         # code will fail if input not linked list
 
         print(f"head: {head}, k: {k}")
-        expected = mySolution.rotateRight(head, k)
+        actual = mySolution.rotateRight(head, k)
         print(f"expected: {expected}, actual: {actual}")
         if expected != actual:
             raise RuntimeError(f"acutal value does not match expected: actual={actual}, expected={expected}")

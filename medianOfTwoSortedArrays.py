@@ -58,9 +58,9 @@ if __name__ == "__main__":
 
     mySolution = Solution()
 
-    for nums1, nums2, actual in INPUTS:
+    for nums1, nums2, expected in INPUTS:
         print(f"nums1: {nums1}, nums2: {nums2}")
-        expected = mySolution.findMedianSortedArrays(nums1, nums2)
+        actual = mySolution.findMedianSortedArrays(nums1, nums2)
         print(f"expected: {expected}, actual: {actual}")
         if expected != actual:
             raise RuntimeError(f"acutal value does not match expected: actual={actual}, expected={expected}")
