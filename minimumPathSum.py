@@ -22,14 +22,6 @@ source: https://leetcode.com/problems/minimum-path-sum/
 from typing import List
 
 
-class gridNode:
-    def __init__(self, position:tuple, val:int, bottom=None, right=None):
-        self.position = position
-        self.val = val
-        self.right = right
-        self.bottom = bottom
-
-# -----------------------------------------------------------------------------
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
         # complexity: O(m*n)
