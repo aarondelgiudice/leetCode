@@ -38,18 +38,34 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        for num1 in nums:
-            num2 = target - num1
+        ## brute force
+        ## time complexity: O(n^2)
+        # for i in range(len(nums)):
+        #     for j in range(len(nums)):
+        #         if j == i:
+        #             continue
 
-            num1_idx = nums.index(num1)
+        #         if nums[i]+nums[j] == target:
+        #             return [i, j]
 
-            sub_nums = nums.copy()
-            sub_nums[num1_idx] = None  # prevent selecting the same index twice
-
-            if num2 in sub_nums:
-                num2_idx = sub_nums.index(num2)
-
-                return [num1_idx, num2_idx]        
+        # hashmap
+        # time complexity O(n)
+        # if A + B = target then A = target - B
+        sums = {}
+        for i , num in enumerate(nums):
+            # find target - B
+            diff = target - num
+            
+            # if target - B in sums then i == A
+            if diff in sums:
+                return [sums[diff] , i]
+            
+            # else add B to sums
+            # and continue to the next value in the nums
+            else:
+                sums[num] = i
+        
+        return # no solution found      
 
 
 # -----------------------------------------------------------------------------
