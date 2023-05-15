@@ -1,12 +1,12 @@
 # Top Interview Questions
 
 ### Content
-- [Easy Questions]()
-- [Medium Questions]()
-- [Hard Questions]()
+- [Easy Questions](https://github.com/aarondelgiudice/leetCode/tree/main/top_questions#easy-questions)
+- [Medium Questions](https://github.com/aarondelgiudice/leetCode/tree/main/top_questions#medium-questions)
+- [Hard Questions](https://github.com/aarondelgiudice/leetCode/tree/main/top_questions#hard-questions)
 
 ### Easy Questions
-1. [Two Sum]() - [solution]()
+1. [Two Sum](https://leetcode.com/problems/two-sum/) - [solution]()
 13. [Roman to Integer]() - [solution]()
 14. [Longest Common Prefix]() - [solution]()
 20. [Valid Parentheses]() - [solution]()
