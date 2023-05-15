@@ -7,7 +7,7 @@
 
 ### Easy Questions
 1. [Two Sum](https://leetcode.com/problems/two-sum/) - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/twoSum.py)
-13. [Roman to Integer]() - solution
+13. [Roman to Integer]() - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/romanToInteger.py)
 14. [Longest Common Prefix]() - solution
 20. [Valid Parentheses]() - solution
 21. [Merge Two Sorted Lists]() - solution
