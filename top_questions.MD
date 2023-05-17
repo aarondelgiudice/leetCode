@@ -10,41 +10,41 @@
 1. [Two Sum](https://leetcode.com/problems/two-sum/) - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/twoSum.py)
 13. [Roman to Integer]() - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/romanToInteger.py)
 14. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/longestCommonPrefix.py)
-20. [Valid Parentheses]() - solution
-21. [Merge Two Sorted Lists]() - solution
-26. [Remove Duplicates from Sorted Array]() - solution
-28. [Find the Index of the First Occurrence in a String]() - solution
-66. [Plus One]() - solution
-69. [Sqrt(x)]() - solution
-70. [Climbing Stairs]() - solution
-88. [Merge Sorted Array]() - solution
-94. [Binary Tree Inorder Traversal]() - solution
-101. [Symmetric Tree]() - solution
-104. [Maximum Depth of Binary Tree]() - solution
-108. [Convert Sorted Array to Binary Search Tree]() - solution
-118. [Pascal's Triangle]() - solution
-121. [Best Time to Buy and Sell Stock]() - solution
-125. [Valid Palindrome]() - solution
-136. [Single Number]() - solution
-141. [Linked List Cycle]() - solution
-160. [Intersection of Two Linked Lists]() - solution
-163. [Missing Ranges]() - solution
-169. [Majority Element]() - solution
-171. [Excel Sheet Column Number]() - solution
-190. [Reverse Bits]() - solution
-191. [Number of 1 Bits]() - solution
-202. [Happy Number]() - solution
-206. [Reverse Linked List]() - solution
-217. [Contains Duplicate]() - solution
-234. [Palindrome Linked List]() - solution
-242. [Valid Anagram]() - solution
-268. [Missing Number]() - solution
-283. [Move Zeroes]() - solution
-326. [Power of Three]() - solution
-344. [Reverse String]() - solution
-350. [Intersection of Two Arrays II]() - solution
-387. [First Unique Character in a String]() - solution
-412. [Fizz Buzz]() - solution
+20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - solution
+21. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) - solution
+26. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) - solution
+28. [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) - solution
+66. [Plus One](https://leetcode.com/problems/plus-one/) - solution
+69. [Sqrt(x)](https://leetcode.com/problems/sqrtx/) - solution
+70. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) - solution
+88. [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) - solution
+94. [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) - solution
+101. [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) - solution
+104. [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) - solution
+108. [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) - solution
+118. [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - solution
+121. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) - solution
+125. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) - solution
+136. [Single Number](https://leetcode.com/problems/single-number/) - solution
+141. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) - solution
+160. [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) - solution
+163. [Missing Ranges](https://leetcode.com/problems/missing-ranges/) - solution
+169. [Majority Element](https://leetcode.com/problems/majority-element/) - solution
+171. [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) - solution
+190. [Reverse Bits](https://leetcode.com/problems/reverse-bits/) - solution
+191. [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) - solution
+202. [Happy Number](https://leetcode.com/problems/happy-number/) - solution
+206. [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) - solution
+217. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) - solution
+234. [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) - solution
+242. [Valid Anagram](https://leetcode.com/problems/valid-anagram/) - solution
+268. [Missing Number](https://leetcode.com/problems/missing-number/) - solution
+283. [Move Zeroes](https://leetcode.com/problems/move-zeroes/) - solution
+326. [Power of Three](https://leetcode.com/problems/power-of-three/) - solution
+344. [Reverse String](https://leetcode.com/problems/reverse-string/) - solution
+350. [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/) - solution
+387. [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/) - solution
+412. [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) - solution
 
 ### Medium Questions
 2. [Add Two Numbers]() - solution
