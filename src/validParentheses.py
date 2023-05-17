@@ -30,30 +30,35 @@ source: `https://leetcode.com/problems/valid-parentheses/`
 
 class Solution:
     def isValid(self, s: str) -> bool:
-        opening = "{[("
-        closing = "}])"
-        brackets = {
-            ')': '(',
-            '}': '{',
-            ']': '['
+        mapping = {
+            "(": ")",
+            "{": "}",
+            "[": "]",
         }
-        stack = []
 
-        for char in s:
-            if char in opening:
-                stack.append(char)
-            
-            elif char in closing:
-                if len(stack) == 0:
-                    return False
-                
-                if stack[-1] == brackets[char]:
-                    stack.pop(-1)
-                
-                else:
-                    return False
+        if len(s) % 2 != 0:
+            return False
         
+        else:
+            stack = []
+
+            for char in s:
+                if char in mapping.keys():
+                    stack.append(char)
+
+                elif char not in mapping.keys():
+
+                    if len(stack) == 0:
+                        return False
+
+                    if char != mapping[stack[-1]]:
+                        return False
+
+                    elif char == mapping[stack[-1]]:
+                        stack = stack[:-1]
+
         return len(stack) == 0
+        
 
 
 # -----------------------------------------------------------------------------
