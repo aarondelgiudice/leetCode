@@ -10,7 +10,7 @@
 1. [Two Sum](https://leetcode.com/problems/two-sum/) - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/twoSum.py)
 13. [Roman to Integer]() - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/romanToInteger.py)
 14. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/longestCommonPrefix.py)
-20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - solution
+20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/validParentheses.py)
 21. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) - solution
 26. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) - solution
 28. [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) - solution
@@ -49,7 +49,7 @@
 ### Medium Questions
 2. [Add Two Numbers]() - solution
 3. [Longest Substring Without Repeating Characters]() - solution
-5. [Longest Palindromic Substring]() - solution
+5. [Longest Palindromic Substring]() - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/longestPalindromicSubstring.py)
 7. [Reverse Integer]() - solution
 8. [String to Integer (atoi)]() - solution
 11. [Container With Most Water]() - solution
