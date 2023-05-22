@@ -17,7 +17,7 @@
 66. [Plus One](https://leetcode.com/problems/plus-one/) - solution
 69. [Sqrt(x)](https://leetcode.com/problems/sqrtx/) - solution
 70. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) - solution
-88. [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) - solution
+88. [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/mergeSortedArray.py)
 94. [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) - solution
 101. [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) - solution
 104. [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) - solution
