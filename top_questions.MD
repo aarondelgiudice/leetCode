@@ -37,7 +37,7 @@
 206. [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) - solution
 217. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) - solution
 234. [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) - solution
-242. [Valid Anagram](https://leetcode.com/problems/valid-anagram/) - solution
+242. [Valid Anagram](https://leetcode.com/problems/valid-anagram/) - [solution](https://github.com/aarondelgiudice/leetCode/blob/main/src/validAnagram.py)
 268. [Missing Number](https://leetcode.com/problems/missing-number/) - solution
 283. [Move Zeroes](https://leetcode.com/problems/move-zeroes/) - solution
 326. [Power of Three](https://leetcode.com/problems/power-of-three/) - solution
