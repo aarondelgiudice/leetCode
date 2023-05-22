@@ -26,16 +26,51 @@ Follow up: What if the inputs contain Unicode characters? How would you adapt yo
 source: https://leetcode.com/problems/valid-anagram/
 """
 
+def merge_sort(s):
+    if len(s) <= 1:
+        return s
+    
+    pivot = len(s) // 2
+    left = merge_sort(s[:pivot])
+    right = merge_sort(s[pivot:])
+
+    result = []
+
+    l_index = r_index = 0
+    while l_index < len(left) and r_index < len(right):
+        if left[l_index] < right[r_index]:
+            result.append(left[l_index])
+            l_index += 1
+        else: # left[l_index] >= right[r_index]
+            result.append(right[r_index])
+            r_index += 1
+
+    result += left[l_index:]
+    result += right[r_index:]
+
+    return result
+
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        # sort
+        # NOTE: sorting (especially merge sort) sucks as a solution
+        # space and time complexity is terrible
+        # also NOTE: can use `sort(s) == sort(t)` but that's kinda cheating
+        return merge_sort(s) == merge_sort(t)
+
+        # hashmap
         if len(s) != len(t):
             return False
 
         counter = {}
         for i in range(len(s)):
+            # A: this effectively does the same thing as code block B
             counter[s[i]] = 1 + counter.get(s[i], 0)
             counter[t[i]] = counter.get(t[i], 0) - 1
 
+            
+            # B: this effectively does the same thing as code block A
             # if s[i] in counter.keys():
             #     counter[s[i]] += 1
 
