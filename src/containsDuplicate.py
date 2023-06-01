@@ -23,28 +23,15 @@ from typing import List
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        # # one liner solution
+        # one liner solution
         # return len(set(nums))!=len(nums)
 
-        # # O(n) solution: set
-        # uniques = set()
-        # for i in nums:
-        #     if i in uniques:
-        #         return True
-        #     uniques.add(i)
-        # return False
-
-        # hashmap solution
-        uniques = {}
-
+        # O(n) solution: hashset
+        uniques = set()
         for i in nums:
-            uniques[i] = uniques.get(i, 0) + 1
-
-            if uniques[i] > 1:
+            if i in uniques:
                 return True
-        if not len(uniques.keys()) == sum(uniques.values()) == len(nums):
-            return True
-
+            uniques.add(i)
         return False
         
 
