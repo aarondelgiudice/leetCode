@@ -53,37 +53,27 @@ def merge_sort(s):
 
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        # sort
-        # NOTE: sorting (especially merge sort) sucks as a solution
-        # space and time complexity is terrible
-        # also NOTE: can use `sort(s) == sort(t)` but that's kinda cheating
-        return merge_sort(s) == merge_sort(t)
-
-        # hashmap
-        if len(s) != len(t):
+        # one liner... kinda
+        # sorting sucks as a solution as far as time and memory complexity
+        # NOTE: you can use sorted(s) == sorted(t) but that's no fun 
+        # return merge_sort(s) == merge_sort(t)
+        
+        # better solution: hashmap
+        # edge cases
+        if not s and not t: # s and t are null
+            return True
+        if not s or not t: # only one of s and t is null
             return False
-
-        counter = {}
+        if len(s) != len(t): # anagrams must be of equal size
+            return False
+        
+        sCounts, tCounts = {}, {}
+        
         for i in range(len(s)):
-            # A: this effectively does the same thing as code block B
-            counter[s[i]] = 1 + counter.get(s[i], 0)
-            counter[t[i]] = counter.get(t[i], 0) - 1
+            sCounts[s[i]] = 1 + sCounts.get(s[i], 0)
+            tCounts[t[i]] = 1 + tCounts.get(t[i], 0)
 
-            
-            # B: this effectively does the same thing as code block A
-            # if s[i] in counter.keys():
-            #     counter[s[i]] += 1
-
-            # else:
-            #     counter[s[i]] = 1
-
-            # if t[i] in counter.keys():
-            #     counter[t[i]] -= 1
-
-            # else:
-            #     counter[t[i]] = -1
- 
-        return any(counter.values()) == 0
+        return sCounts == tCounts
 
 
 # -----------------------------------------------------------------------------
