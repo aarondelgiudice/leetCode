@@ -30,29 +30,32 @@ class TreeNode:
         self.right = right
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
-        def dfs(root: Optional[TreeNode]):
-            # function returns a tuple: (isBalanced: bool, subtreeHeight: int)
+        def dfs(root):
+            # function returns a tuple: (balanced: bool, height: int)
             # first handle base case: root node is null
             if not root:
                 # an empty node is technically balanced
                 # but has a height of 0
                 return (True, 0)
-            
+
             # recursively call function and left and right nodes
-            leftBalanced, leftHeight = dfs(root.left)
-            rightBalanced, rightHeight = dfs(root.right)
+            leftBal, leftHeight = dfs(root.left)
+            rightBal, rightHeight = dfs(root.right)
 
-            # check if subtree is balanced:
-            # (|leftHeight - rightHeight| < 2) and (left, right subtrees are balanced)
-            heightDiff = abs(leftHeight-rightHeight)
+            # +1 for current node + max height of left/right leaf nodes
+            height = 1 + max(leftHeight, rightHeight)
 
-            isBalanced = (heightDiff < 2 and leftBalanced and rightBalanced)
+            # either left/right leaf node is unbalanced, then return False
+            if not (leftBal and rightBal):
+                return (False, height)
 
-            # get height of subtree: nodeHeight + max height left/right nodes
-            nodeHeight = 1 # if node is not null, it has a height of 1
-            subtreeHeight = nodeHeight + max(leftHeight, rightHeight)
-            
-            return (isBalanced, subtreeHeight)
+            # if height difference between left/rigth leaf nodes is greater than 2,
+            # then return false
+            if not abs(leftHeight-rightHeight) < 2:
+                return (False, height)
+
+            # else: balanced is true and height difference is < 2
+            return (True, height)
 
         return dfs(root)[0] # only return boolean
 
