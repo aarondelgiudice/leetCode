@@ -44,20 +44,19 @@ class Solution:
             nonlocal diameter # allow dfs() to edit diameter var
 
             if not root:
-                # height of a null tree is -1 (not 0)
-                # the height of a single node is 0 (not 1)
-                return -1
+                # height of a null tree is 0
+                return 0
 
             # recursively find height of left, right subtress
-            left = dfs(root.left)
-            right = dfs(root.right)
+            left, right = dfs(root.left), dfs(root.right)
 
             # find current diameter = left height + right height
-            curr = (1 + left) + (1 + right)
+            curr = left + right
             # if curr > global diameter, update global diameter var
             diameter = max(curr, diameter)
 
-            return 1 + max(left, right)
+            # return max height of left, right subtrees
+            return 1 + max(left, right) # +1 for current node
 
         # call recursive function to process tree and update global diameter variable
         dfs(root)
