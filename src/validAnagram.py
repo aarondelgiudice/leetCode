@@ -25,30 +25,53 @@ Follow up: What if the inputs contain Unicode characters? How would you adapt yo
 
 source: https://leetcode.com/problems/valid-anagram/
 """
+from typing import List
 
-def merge_sort(s):
-    if len(s) <= 1:
+
+def merge_sort(s) -> List:
+    """
+    merge sort implementation
+        Time: O(n log n)
+        Space: O(n)
+    
+    Args:
+        s: List or str
+
+    Returns:
+        List
+
+    Raises:
+        n/a
+    """
+    # base case
+    # return s if s is null or is too short
+    if not s or len(s) <= 1:
         return s
     
+    # find pivot point -> halfway point in s
     pivot = len(s) // 2
-    left = merge_sort(s[:pivot])
-    right = merge_sort(s[pivot:])
 
-    result = []
+    # recursively sort left and right halves
+    left, right = s[:pivot], s[pivot:]
+    left, right = merge_sort(left), merge_sort(right)
 
+    # merge left and right halves in sorted orfer
+    s_sorted = []
     l_index = r_index = 0
+
     while l_index < len(left) and r_index < len(right):
         if left[l_index] < right[r_index]:
-            result.append(left[l_index])
+            s_sorted.append(left[l_index])
             l_index += 1
         else: # left[l_index] >= right[r_index]
-            result.append(right[r_index])
+            s_sorted.append(right[r_index])
             r_index += 1
 
-    result += left[l_index:]
-    result += right[r_index:]
+    # append to s_sorted any remaining values in left, right
+    s_sorted += left[l_index:]
+    s_sorted += right[r_index:]
 
-    return result
+    return s_sorted
 
 
 class Solution:
