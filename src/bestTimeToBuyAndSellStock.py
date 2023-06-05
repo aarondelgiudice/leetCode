@@ -31,18 +31,19 @@ class Solution:
         # prices[left] -> buy price
         # prices[right] -> sell price
         # sell - buy -> profit
-        left, right = 0, 1
-        max_p = 0
+        left = 0
+        right = 1
+        max_profit = 0
 
         while right < len(prices):
             # check profitability
-            if prices[left] < prices[right]:
-                p = prices[right] - prices[left]
+            if prices[right] > prices[left]:
+                curr = prices[right] - prices[left]
                 
                 # if current profit (p) beats max profit (max_p), update max_p
-                if p > max_p:
-                    max_p = p
-            else:
+                max_profit = max(curr, max_profit)
+            
+            else: # prices[right] <= prices[left]:
                 # if buy price is less than sell price,
                 # update left point to match right pointer
                 left = right
@@ -50,7 +51,24 @@ class Solution:
             # regardless of condition, continue scanning array
             right += 1
 
-        return max_p
+        return max_profit
+    
+        # kadane's algorithm (two pointer solution is faster)
+        max_profit = 0
+        max_current = 0
+
+        for i in range(1, len(prices)):
+            # check if current profit is > 0
+            buy_price, sell_price = prices[i], prices[i-1] # current day, previous day
+            curr_profit = buy_price - sell_price
+
+            # get max rolling profit -> sum(previous profit, current profit)
+            max_current = max(0, max_current + curr_profit)
+
+            # get max of current profit vs. max profit
+            max_profit = max(max_profit, max_current)
+
+        return max_profit
 
 
 
