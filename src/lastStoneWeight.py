@@ -36,7 +36,11 @@ from typing import List
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
         weight = 0
-        # max heap solution
+        
+        if not stones:
+            return weight
+        
+        # # max heap solution
         # python does not support max heap, only min heap
         # to spoof a max heap, first convert all elements to negative
         # and then add the negative numbers to a min heap
@@ -66,6 +70,25 @@ class Solution:
         if stones:
             # convert negative -> positive
             weight = -1*stones[0]
+        
+        return weight
+        
+        # suboptimal solution: sorting at each step
+        while len(stones) > 1:
+            stones = sorted(stones)
+
+            y = stones.pop()
+            x = stones.pop()
+
+            if x == y:
+                pass
+            if x != y:
+                y -= x
+            
+                stones.append(y)
+            
+        if stones:
+            weight = stones[0]
 
         return weight
 
