@@ -41,17 +41,25 @@ class Solution:
         # set previous and current pointers
         prev, curr = None, head
 
+        # iterate over listNodes until curr is None (end of list)
         while curr: # is not None
-            # create tmp variable to store curr.next
+            # create a temp variable for the next listNone (current.next)
             nxt = curr.next
             
-            # reverse curr
+            # reverse current postion,
+            # replace current.next with previous position
             curr.next = prev
             
-            # shift pointers
+            # shift pointers, previous = current, current = next
             prev = curr
             curr = nxt
 
+        # why return prev?
+        # curr is set to nxt
+        # and nxt is defined by curr.next
+        # the final listNote in a linked list will have a head.next value of None
+        # so curr == nxt == None
+        # so return prev
         return prev
 
         # # recursive solution:
