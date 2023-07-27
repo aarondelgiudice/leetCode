@@ -54,13 +54,13 @@ class Solution:
             target = right - (right - left) // 2
         
             # target*n == max potential runtime
-            # if current runtime >= max potential runtime, increment max potential runtime
+            # if current runtime >= max potential runtime, increment target runtime
             curr_runtime = sum(min(battery, target) for battery in batteries) 
             
             if curr_runtime >= target * n: 
                 left = target 
         
-            # else, decrement max potential runtime
+            # else, decrement target runtime
             else: # curr_runtime < target * n
                 right = target - 1 
         
