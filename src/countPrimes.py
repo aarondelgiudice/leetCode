@@ -42,10 +42,6 @@ class Solution:
     def countPrimes(self, n: int) -> int:
         return sum(get_seive(n))
 
-
-# -----------------------------------------------------------------------------
-# run solution
-# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     INPUTS = (
         # input: int,   output: int

@@ -44,11 +44,7 @@ class Solution:
         elif len(merged) % 2 != 0:  # len(merged) is even
             idx = int(len(merged) / 2)
             return merged[idx]
-        
 
-# -----------------------------------------------------------------------------
-# run solution
-# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     INPUTS = (
         # nums1: List(int), nums2: List(int),   output: float
