@@ -55,7 +55,7 @@ if __name__ == "__main__":
     )
 
     for strs, expected in INPUTS:
-        actual = Solution.groupAnagrams(strs)
+        actual = Solution().groupAnagrams(strs)
         # TODO: sort actual
         # TODO: sort expected
         # TODO: assert sorted actual == sorted expected, f"{acutal=}, {expected=}"
