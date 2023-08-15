@@ -10,7 +10,7 @@ Output: [1,2]
 Example 2:
 Input: nums = [1], k = 1
 Output: [1]
- 
+
 
 Constraints:
 1 <= nums.length <= 10**5
@@ -25,24 +25,25 @@ from typing import List
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         # easy solution -> heap  -> O(n*logn) time
-        # counter = {}
+        # counter
+        frequency = {}
+        for num in nums:
+            frequency[num] = 1 + frequency.get(num, 0)
 
-        # for num in nums:
-        #     counter[num] = 1 + counter.get(num, 0)
+        priority_queue = []
+        for num, freq in frequency.items():
+            # map value: -frequency: num
+            # note: heapq is a minheap, so convert to negative
+            freq *= -1
+            heapq.heappush(priority_queue, (freq, num))
 
-        
-        # maxHeap = [(-freq, num) for num, freq in counter.items()]
+        # append the top-k items in priority_queue to result
+        result = []
+        while priority_queue:
+            result.append(heapq.heappop(priority_queue)[1])
+            if len(result) ==  k:
+                return result
 
-        # heapq.heapify(maxHeap)
-        
-        # res = []
-        
-        # for i in range(k):
-        #     maxVal = heapq.heappop(maxHeap)
-        #     res.append(maxVal[1])
-
-        # return res
-        
         # better solution -> hashMap -> O(n) time
         counter = {}
         freq = [[] for _ in range(len(nums)+1)]
@@ -60,7 +61,7 @@ class Solution:
 
                 if len(res) == k:
                     return res
-                
+
 if __name__ == "__main__":
     INPUTS = (
         # nums  k   expected
