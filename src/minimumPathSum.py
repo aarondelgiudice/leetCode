@@ -26,11 +26,11 @@ class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
         # complexity: O(m*n)
         
-        # handle edge cases ---------------------------------------------------
+        # handle edge cases
         if not grid or len(grid) == 0:
             return 0
 
-        # solve ---------------------------------------------------------------
+        # solve
         m, n = len(grid), len(grid[0])
 
         # sum values along x-axis of row1 
@@ -49,10 +49,6 @@ class Solution:
         # value of last step is sum of minimum path    
         return grid[-1][-1]
 
-
-# -----------------------------------------------------------------------------
-# run solution
-# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     INPUTS = (
         # grid: List[List[int]],    output: int

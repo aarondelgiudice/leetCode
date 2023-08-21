@@ -79,10 +79,6 @@ class Solution:
 
         return "".join(stack)  # convert list to string
 
-
-# -----------------------------------------------------------------------------
-# run solution
-# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     INPUTS = (
         # input: int,   output: str

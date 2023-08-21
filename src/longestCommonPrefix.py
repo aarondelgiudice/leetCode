@@ -67,10 +67,6 @@ class Solution:
         # return longest common prefix or ""
         return prefix
 
-
-# -----------------------------------------------------------------------------
-# run solution
-# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     INPUTS = (
         # s: List[str],                 output: str

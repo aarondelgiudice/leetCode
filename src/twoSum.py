@@ -67,10 +67,6 @@ class Solution:
         
         return # no solution found      
 
-
-# -----------------------------------------------------------------------------
-# run solution
-# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     INPUTS = (
     # nums: List(int),  target: int,    output: list(int)

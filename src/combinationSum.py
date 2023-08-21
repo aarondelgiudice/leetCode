@@ -67,9 +67,6 @@ class Solution:
             current.pop(len(current) - 1)
  
 
-# -----------------------------------------------------------------------------
-# run solution
-# -----------------------------------------------------------------------------
 if __name__ == "__main__":
     INPUTS = (
         # candidates: List[int],    tartget: int,   expected: List[int]
