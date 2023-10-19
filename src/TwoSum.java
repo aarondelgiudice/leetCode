@@ -28,7 +28,7 @@ public class TwoSum {
         HashMap<Integer, Integer> results = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
-            // diff == target - nums[i] -> the value we want to find to solve for target
+            // diff == target - nums[i] -> the value we want to find to solve for target 
             int diff = target - nums[i];
 
             // check if curr is in results
