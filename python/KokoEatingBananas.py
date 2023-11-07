@@ -1,6 +1,7 @@
 """875. Koko Eating Bananas | Medium"""
 
 import math
+import time
 
 from typing import List
 
@@ -13,39 +14,69 @@ def main():
         ([30, 11, 23, 4, 20], 6, 23),
     )
 
+    success = 0
+    start_time = time.time()
+
     for piles, h, expected in test_cases:
+        current_start_time = time.time()
+
         actual = solution(piles, h)
 
+        current_end_time = time.time()
+        current_total_time = round(current_end_time - current_start_time, 4)
+
         if actual == expected:
-            print(f"✅ solution(piles={piles}, h={h}) returned {actual}")
+            print(
+                f"✅ solution(piles={piles}, h={h}) returned {actual}. Took {current_total_time}s."
+            )
+
+            success += 1
 
         else:
             print(
-                f"❌ solution(piles={piles}, h={h}) returned {actual}, but expected {expected}"
+                f"❌ solution(piles={piles}, h={h}) returned {actual}, but expected {expected}."
             )
+
+    end_time = time.time()
+    total_time = round(end_time - start_time, 4)
+
+    assert success == len(test_cases), f"❌ {len(test_cases)-success} test(s) failed."
+
+    print(f"\n✅ {success} test(s) passed! Took {current_total_time}s.")
 
     return
 
 
 def solution(piles: List[int], h: int) -> int:
     # binary search
-    left = 1  # min speed -> 1 banana/hour
-    right = sum(piles)  # max speed -> all bananas in 1 hour
+    min_k = 1  # 1 banana/hour
+    max_k = max(piles)  # bananas/hour == the largest pile
 
-    while left < right:  # <= will cause time limit exceeded
-        mid = left + (right - left) // 2
+    while min_k < max_k:
+        mid = min_k + (max_k - min_k) // 2
 
+        # time to eat all banans at speed = k
         hours_spent = 0
+
         for pile in piles:
             hours_spent += math.ceil(pile / mid)
 
+        # check if k is valid
+        # we want the max value for k,
+        # so keep increasing mid until hours_spent > h
         if hours_spent <= h:
-            right = mid
-        else:
-            # hours_spent > h
-            left = mid + 1
+            # hours_spent is valid (but may not optimal yet),
+            # so update max_k.
+            # the final update to max_k before the while loop
+            # exits will be the optimal max_K
+            max_k = mid
 
-    return right
+        else:
+            # hours_spent is not valid (hours_spent > h),
+            # so increment min_k to increase mid
+            min_k = mid + 1
+
+    return max_k  # return optimal k
 
     # brute force -> will exceed time limit
     # start with minimum value for speed
